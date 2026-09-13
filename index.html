@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎓 Student Performance AI</div>
+    <div class="status">
+        <span></span> AI Model Online
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div>
+            <p class="tag">ARTIFICIAL INTELLIGENCE</p>
+            <h1>Student Performance<br><strong>Predictor</strong></h1>
+            <p class="subtitle">
+                Predict student academic performance using study habits,
+                attendance, motivation and other important factors.
+            </p>
+        </div>
+
+        <div class="hero-card">
+            <div class="hero-icon">📊</div>
+            <h3>AI Powered Prediction</h3>
+            <p>35 engineered features</p>
+        </div>
+    </section>
+
+    <section class="card">
+
+        <div class="section-title">
+            <h2>📊 Prediction Dashboard</h2>
+            <p>Enter student information to predict academic performance.</p>
+        </div>
+
+        <form id="predictionForm">
+
+            <h3 class="form-heading">📚 Study Habits</h3>
+
+            <div class="grid">
+
+                <div class="field">
+                    <label>Hours Studied (Weekly)</label>
+                    <input id="Hours_Studied" type="number" min="0" max="50" value="20" required>
+                </div>
+
+                <div class="field">
+                    <label>Attendance (%)</label>
+                    <input id="Attendance" type="number" min="60" max="100" value="85" required>
+                </div>
+
+                <div class="field">
+                    <label>Tutoring Sessions Monthly</label>
+                    <input id="Tutoring_Sessions" type="number" min="0" max="10" value="1" required>
+                </div>
+
+                <div class="field">
+                    <label>Previous Exam Score</label>
+                    <input id="Previous_Scores" type="number" min="0" max="100" value="75" required>
+                </div>
+
+            </div>
+
+            <h3 class="form-heading">🏠 Environment & Support</h3>
+
+            <div class="grid">
+
+                <div class="field">
+                    <label>Parental Involvement</label>
+                    <select id="Parental_Involvement">
+                        <option>Low</option>
+                        <option selected>Medium</option>
+                        <option>High</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Access to Resources</label>
+                    <select id="Access_to_Resources">
+                        <option>Low</option>
+                        <option selected>Medium</option>
+                        <option>High</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Family Income</label>
+                    <select id="Family_Income">
+                        <option>Low</option>
+                        <option selected>Medium</option>
+                        <option>High</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Teacher Quality</label>
+                    <select id="Teacher_Quality">
+                        <option>Low</option>
+                        <option selected>Medium</option>
+                        <option>High</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Internet Access</label>
+                    <select id="Internet_Access">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <h3 class="form-heading">🧠 Personal Factors</h3>
+
+            <div class="grid">
+
+                <div class="field">
+                    <label>Motivation Level</label>
+                    <select id="Motivation_Level">
+                        <option>Low</option>
+                        <option>Medium</option>
+                        <option selected>High</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Peer Influence</label>
+                    <select id="Peer_Influence">
+                        <option>Negative</option>
+                        <option>Neutral</option>
+                        <option selected>Positive</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Sleep Hours Daily</label>
+                    <input id="Sleep_Hours" type="number" min="4" max="10" value="7" required>
+                </div>
+
+                <div class="field">
+                    <label>Physical Activity (Hours/Week)</label>
+                    <input id="Physical_Activity" type="number" min="0" max="10" value="5" required>
+                </div>
+
+                <div class="field">
+                    <label>Class Participation Score</label>
+                    <input id="Class_Participation_Score" type="number" min="0" max="100" value="80" required>
+                </div>
+
+            </div>
+
+            <h3 class="form-heading">🎓 Academic Details</h3>
+
+            <div class="grid">
+
+                <div class="field">
+                    <label>Extracurricular Activities</label>
+                    <select id="Extracurricular_Activities">
+                        <option selected>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>School Type</label>
+                    <select id="School_Type">
+                        <option selected>Public</option>
+                        <option>Private</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Grade Level</label>
+                    <select id="Grade_Level">
+                        <option>1</option>
+                        <option selected>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Current Semester</label>
+                    <select id="Current_Semester">
+                        <option>1</option>
+                        <option>2</option>
+                        <option selected>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Learning Disabilities</label>
+                    <select id="Learning_Disabilities">
+                        <option selected>No</option>
+                        <option>Yes</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Gender</label>
+                    <select id="Gender">
+                        <option selected>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Distance From Home</label>
+                    <select id="Distance_from_Home">
+                        <option selected>Near</option>
+                        <option>Moderate</option>
+                        <option>Far</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Parental Education</label>
+                    <select id="Parental_Education_Level">
+                        <option selected>College</option>
+                        <option>High School</option>
+                        <option>Postgraduate</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" id="predictBtn">
+                🚀 Predict Student Performance
+            </button>
+
+        </form>
+
+    </section>
+
+    <section id="result" class="result-card hidden">
+
+        <div class="result-header">
+            <h2>Prediction Result</h2>
+            <span id="category">Good</span>
+        </div>
+
+        <div class="score-box">
+            <div id="score">--</div>
+            <p>Predicted Performance Score</p>
+        </div>
+
+        <div class="progress">
+            <div id="progressBar"></div>
+        </div>
+
+        <p id="resultMessage"></p>
+
+    </section>
+
+</main>
+
+<footer>
+    Student Performance Predictor • Machine Learning Project
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
