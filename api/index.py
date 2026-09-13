@@ -191,13 +191,19 @@ def create_features(x: PredictionInput):
     }])
 
 
-@app.get("/")
-def home():
-    return {
-        "message": "Student Performance Predictor API is running",
-        "status": "success"
-    }
+from fastapi.responses import FileResponse
 
+@app.get("/", include_in_schema=False)
+def root():
+    return FileResponse(BASE_DIR / "index.html")
+
+@app.get("/style.css", include_in_schema=False)
+def style():
+    return FileResponse(BASE_DIR / "style.css")
+
+@app.get("/script.js", include_in_schema=False)
+def script():
+    return FileResponse(BASE_DIR / "script.js")
 
 @app.post("/api/predict")
 def predict_student(x: PredictionInput):
